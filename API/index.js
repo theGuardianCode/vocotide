@@ -1,7 +1,10 @@
+const { exec } = require("child_process");
+
 const app = require('express')();
 const PORT = 8080;
 
 const fs = require('fs');
+const { stdout, stderr } = require("process");
 let file;
 let array;
 
@@ -20,6 +23,21 @@ const getObject = () => {
     };
     return response;
 };
+
+setInterval(() => {
+    console.log("new word on the way");
+    exec("C:/Python310/python.exe c:/Users/nickr/OneDrive/Documents/vocotide/generator/main.py", (error, stdout, stderr) => {
+        if (error) {
+            console.log(error);
+            return;
+        }
+        if (stderr) {
+            console.log(stderr);
+            return;
+        }
+        console.log(stdout);
+    });
+}, 30000);
 
 app.get('/word', (req, res) => {
     res.status(200).send(getObject());
