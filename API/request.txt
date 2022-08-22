@@ -1,7 +1,1 @@
-latent
-(noun) (forensics) The residue left by a person's finger that can be made visible by a process such as powder dusting; a latent fingerprint.
-(noun) An underlying cause that can be inferred from statistical correlations; factor.
-(noun) Anything that is latent.
-(adjective) Existing or present but concealed or inactive.
-(adjective) (of a virus) remaining in an inactive or hidden phase; dormant.
-(adjective) Lying dormant or hidden until circumstances are suitable for development or manifestation.
+darbars

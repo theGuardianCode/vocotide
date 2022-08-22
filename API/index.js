@@ -6,7 +6,7 @@ let file;
 let array;
 
 const getObject = () => {
-    file = fs.readFileSync('request.txt', 'utf8');
+    file = fs.readFileSync('API/request.txt', 'utf8');
     array = file.split('\n');
 
     let definitions = [];
