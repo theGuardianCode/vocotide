@@ -26,7 +26,7 @@ const getObject = () => {
 
 setInterval(() => {
     console.log("new word on the way");
-    exec("C:/Python310/python.exe c:/Users/nickr/OneDrive/Documents/vocotide/generator/main.py", (error, stdout, stderr) => {
+    exec("Python3 /generator/main.py", (error, stdout, stderr) => {
         if (error) {
             console.log(error);
             return;
