@@ -3,6 +3,9 @@ const { exec } = require("child_process");
 const app = require('express')();
 const PORT = 8080;
 
+const cors = require('cors');
+app.use(cors());
+
 const fs = require('fs');
 let file;
 let array;
