@@ -25,7 +25,7 @@ const getObject = () => {
 
 setInterval(() => {
     console.log("new word on the way");
-    exec("Python /generator/main.py", (error, stdout, stderr) => {
+    exec("python3 ./generator/main.py", (error, stdout, stderr) => {
         if (error) {
             console.log(error);
             return;

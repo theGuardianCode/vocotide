@@ -1,6 +1,9 @@
+#1 /usr/bin/python3
+
 import requests
 
 def get_word():
+    print("getting word")
     random_word = ""
 
     response = requests.get("https://random-word-api.herokuapp.com/word")
