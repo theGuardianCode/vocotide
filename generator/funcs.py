@@ -1,6 +1,7 @@
 #1 /usr/bin/python3
 
 import requests
+from profanity_check import predict
 
 def get_word():
     random_word = ""
@@ -18,7 +19,12 @@ def get_definition(word):
     try:
         for i in range(len(response_json[0]["meanings"])):
             for j in range(len(response_json[0]["meanings"][i]["definitions"])):
-                definitions.append(f'({response_json[0]["meanings"][i]["partOfSpeech"]}) ' + response_json[0]["meanings"][i]["definitions"][j]["definition"])
+                profanity = predict([f'{ response_json[0]["meanings"][i]["definitions"][j]["definition"]}'])
+                if (profanity[0] == 1) {
+                    get_word()
+                } else {
+                    definitions.append(f'({response_json[0]["meanings"][i]["partOfSpeech"]}) ' + response_json[0]["meanings"][i]["definitions"][j]["definition"])
+                }
     except KeyError:
         get_word()
     
